@@ -15,6 +15,8 @@
   pip install tkinter --user
   pip install dlib --user
   pip install cmake --user
+  pip install oauth2client --user
+  pip install gspread --user
   ```
   - Programme Entry Point ```FaceBasedAttendenceSystem.py```
   - Give Attendence Button will open the Face Detection Programme. And Exit will close it.
