@@ -1,4 +1,4 @@
-# Face Recognition Based Attendence System 
+# Face Recognition Based Attendence System (FRBAS)
 
 - ## Tech Stack :-
     - #### ***Python-3 and it's prebuilt packages/libraries***
@@ -21,7 +21,7 @@
   pip install gspread --user
   ```
   - Programme Entry Point ```Main.py```.
-    Give **Username** and **Password** to access the **FBAS(Face Based Attendence System)** programme.
+    Give **Username** and **Password** to access the **FRBAS(Face Recognition Based Attendence System)** programme.
     By any chance if you forget the password you can always recover it with **Forget Password**
     option enter the secret code and password will be shown. Then after the **login** a window will be opened.
     Give Attendence Button will open the Face Detection Programme and Exit will close it.
