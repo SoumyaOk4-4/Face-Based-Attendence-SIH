@@ -3,7 +3,7 @@ import os
 
 # Create the root window
 root = Tk()
-root.title("Facial Recognition Attendance System")
+root.title("Face Recognition Based Attendence System By Tech Tetris")
 root.configure(background="white")
 
 # Function to launch the attendance app
@@ -22,7 +22,7 @@ def open_github():
 # Title Label
 titleLabel = Label(
     root,
-    text="Face Recognition-Based Attendance System",
+    text="Face Recognition Based Attendance System",
     font=("Arial", 24, "bold"),
     fg="black",
     bg="white",
