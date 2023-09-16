@@ -7,5 +7,5 @@
         - *numpy*
     - #### ***MS-Excel as DataBase***
 ---
-### ***<u>NOTE</u>:*** The *photos*, *Reports* folder has been removed due to privacy reason.
+### ***<u>NOTE</u>:*** The *Pictures*, *Reports* folder has been removed due to privacy reason.
 ---
