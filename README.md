@@ -27,7 +27,7 @@
     Give Attendence Button will open the Face Detection Programme and Exit will close it.
     Then to close the Face Detection Programme press `q`.
 ---
-### **<u>NOTE</u>:** The *Pictures* folder and the *credentials.json* file have been removed due to privacy reason.
+### <u>NOTE</u>: The *Pictures* folder and the *credentials.json* file have been removed due to privacy reason.
 
 #### *Copyright © 2023 Tech Tetris*
 ---
