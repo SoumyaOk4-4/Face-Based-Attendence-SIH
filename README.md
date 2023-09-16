@@ -22,7 +22,8 @@
   ```
   - Programme Entry Point ```Main.py```.
     Give **Username** and **Password** to access the **FBAS(Face Based Attendence System)** programme.
-    By any chance if you forget the password you can always recover it with **Forget Password**.
+    By any chance if you forget the password you can always recover it with **Forget Password**
+    option enter the secret code and password will be shown. Then after the **login** a window will be opened.
     Give Attendence Button will open the Face Detection Programme and Exit will close it.
     Then to close the Face Detection Programme press `q`.
 ---
