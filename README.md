@@ -6,7 +6,7 @@
         - *face_recognition*
         - *numpy*
         - *tkinter*
-- # Guide :-
+- ## Guide :-
   Install dependencies
   ```
       pip install face_recognition --user
@@ -16,6 +16,7 @@
       pip install dlib --user
       pip install cmake --user
    ```
+  Programme Entry Point ```FaceBasedAttendence```
 ---
 ### ***<u>NOTE</u>:*** The *Pictures*, *Reports* folder has been removed due to privacy reason.
 
