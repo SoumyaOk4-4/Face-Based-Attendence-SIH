@@ -18,4 +18,6 @@
    ```
 ---
 ### ***<u>NOTE</u>:*** The *Pictures*, *Reports* folder has been removed due to privacy reason.
+
+#### Copyright © 2023 Tech Tetris
 ---
