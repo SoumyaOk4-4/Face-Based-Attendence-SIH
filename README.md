@@ -20,9 +20,11 @@
   pip install oauth2client --user
   pip install gspread --user
   ```
-  - Programme Entry Point ```FaceBasedAttendenceSystem.py```
-  - Give Attendence Button will open the Face Detection Programme. And Exit will close it.
-  - To close the Face Detection Programme press `q`
+  - Programme Entry Point ```Main.py```.
+    Give *Username* and *Password* to access the FBAS(Face Based Attendence System) programme.
+    By any chance if you forget the password you can always recover it with *Forget Password*.
+    Give Attendence Button will open the Face Detection Programme and Exit will close it.
+    Then to close the Face Detection Programme press `q`.
 ---
 ### ***<u>NOTE</u>:*** The *Pictures*, *Reports* folder has been removed due to privacy reason.
 
