@@ -6,6 +6,8 @@
         - *face_recognition*
         - *numpy*
         - *tkinter*
+        - *os*
+    - #### ****Google Sheet API to store data****
 - ## Guide :-
   - Install dependencies
   ```
