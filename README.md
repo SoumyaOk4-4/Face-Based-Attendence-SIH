@@ -8,7 +8,7 @@
         - *tkinter*
         - *os*
     - #### ****Google Sheet API to store data as DataBase****
-- ## Guide :-
+- ## Setup Guide :-
   - Install dependencies
   ```
   pip install face_recognition --user
