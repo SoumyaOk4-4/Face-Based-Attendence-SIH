@@ -21,8 +21,8 @@
   pip install gspread --user
   ```
   - Programme Entry Point ```Main.py```.
-    Give *Username* and *Password* to access the FBAS(Face Based Attendence System) programme.
-    By any chance if you forget the password you can always recover it with *Forget Password*.
+    Give **Username** and **Password** to access the **FBAS(Face Based Attendence System)** programme.
+    By any chance if you forget the password you can always recover it with **Forget Password**.
     Give Attendence Button will open the Face Detection Programme and Exit will close it.
     Then to close the Face Detection Programme press `q`.
 ---
