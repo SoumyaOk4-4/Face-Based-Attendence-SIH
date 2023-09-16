@@ -1,19 +1,19 @@
 import face_recognition
 import cv2
 import numpy as np
-import csv
-import os
 from datetime import datetime
+import gspread
+from oauth2client.service_account import ServiceAccountCredentials
 
-video_capture = cv2.VideoCapture(1) # inbuild=0, webcam=1
+video_capture = cv2.VideoCapture(1)  # inbuild=0, webcam=1
 
-CSE23_108_image = face_recognition.load_image_file("Pictures/CSE23_108.jpg")
+CSE23_108_image = face_recognition.load_image_file("pictures/CSE23_108.jpg")
 CSE23_108_encoding = face_recognition.face_encodings(CSE23_108_image)[0]
 
-CSE23_96_image = face_recognition.load_image_file("Pictures/CSE23_96.jpg")
+CSE23_96_image = face_recognition.load_image_file("pictures/CSE23_96.jpg")
 CSE23_96_encoding = face_recognition.face_encodings(CSE23_96_image)[0]
 
-CSE23_114_image = face_recognition.load_image_file("Pictures/CSE23_114.jpg")
+CSE23_114_image = face_recognition.load_image_file("pictures/CSE23_114.jpg")
 CSE23_114_encoding = face_recognition.face_encodings(CSE23_114_image)[0]
 
 known_face_encoding = [
@@ -35,20 +35,26 @@ face_encodings = []
 face_names = []
 s = True
 
+# Initialize the Google Sheets API
+scope = [
+    "https://spreadsheets.google.com/feeds",
+    "https://www.googleapis.com/auth/drive",
+]
+credentials = ServiceAccountCredentials.from_json_keyfile_name(
+    "credentials.json", scope
+)
+gc = gspread.authorize(credentials)
 
-now = datetime.now()
-current_date = now.strftime("%Y-%m-%d")
-csv_folder = 'Reports'
-
-if not os.path.exists(csv_folder):
-    os.makedirs(csv_folder)
-
-csv_file_path = os.path.join(csv_folder, current_date)
-
-f = open(csv_file_path + ".csv", "w+", newline="")
-lnwriter = csv.writer(f)
+# Open the Google Sheet by its title
+google_sheet_title = "techtetries team"  # Replace with your Google Sheet title
+worksheet = gc.open(
+    "techtetries team"
+).sheet1  # Use the appropriate sheet name or index
 
 while True:
+    now = datetime.now()  # Get the current date and time
+    current_date = now.strftime("%Y-%m-%d")  # Define the current date
+
     _, frame = video_capture.read()
     small_frame = cv2.resize(frame, (0, 0), fx=0.25, fy=0.25)
     rgb_small_frame = small_frame[:, :, ::-1]
@@ -58,6 +64,7 @@ while True:
             rgb_small_frame, face_locations
         )
         face_names = []
+
         for face_encoding in face_encodings:
             matches = face_recognition.compare_faces(known_face_encoding, face_encoding)
             name = ""
@@ -91,12 +98,14 @@ while True:
                 if name in students:
                     students.remove(name)
                     print(students)
-                    current_time = now.strftime("%H-%M-%S")
-                    lnwriter.writerow([name, current_time])
-    cv2.imshow("Face Recognition Based Attendence System By Tech Tetris Copyright © 2023 Tech Tetris \t (Press 'q' To Exit)", frame)
+                    current_time = now.strftime("%H:%M:%S")
+                    # Update the Google Sheet with attendance data
+                    row_to_insert = [current_date, name, current_time]
+                    worksheet.append_row(row_to_insert)
+
+    cv2.imshow("Face Recognition Based Attendance System \t (Press 'q' To Exit)", frame)
     if cv2.waitKey(1) & 0xFF == ord("q"):
         break
 
 video_capture.release()
 cv2.destroyAllWindows()
-f.close()
