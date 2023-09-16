@@ -93,7 +93,7 @@ while True:
                     print(students)
                     current_time = now.strftime("%H-%M-%S")
                     lnwriter.writerow([name, current_time])
-    cv2.imshow("Face Recognition Based Attendence System By Tech Tetris \t (Press 'q' To Exit)", frame)
+    cv2.imshow("Face Recognition Based Attendence System By Tech Tetris Copyright © 2023 Tech Tetris \t (Press 'q' To Exit)", frame)
     if cv2.waitKey(1) & 0xFF == ord("q"):
         break
 
