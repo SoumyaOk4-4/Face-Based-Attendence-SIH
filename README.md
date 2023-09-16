@@ -1,7 +1,7 @@
 # Face Recognition Based Attendence System 
 
 - ## Tech Stack :-
-    - #### ***Python-3 and it's prebuild packages/libraries***
+    - #### ***Python-3 and it's prebuilt packages/libraries***
         - *opencv-python*
         - *face_recognition*
         - *numpy*
