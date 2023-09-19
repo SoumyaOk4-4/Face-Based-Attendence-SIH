@@ -7,7 +7,7 @@
         - *numpy*
         - *tkinter*
         - *os*
-        - *PIL*
+        - *gspread*
     - #### ****Google Sheet API to store data as DataBase****
 - ## Setup Guide :-
   - Install dependencies
